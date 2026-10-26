@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, "Segoe UI", system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  @apply bg-slate-50 text-ink-900;
+}
+
+/* Markdown rendering inside assistant messages */
+.markdown h1 {
+  @apply text-xl font-semibold mt-2 mb-3 text-ink-900;
+}
+.markdown h2 {
+  @apply text-lg font-semibold mt-4 mb-2 text-ink-900;
+}
+.markdown h3 {
+  @apply text-base font-semibold mt-3 mb-2 text-ink-900;
+}
+.markdown p {
+  @apply my-2 leading-relaxed text-ink-700;
+}
+.markdown ul {
+  @apply my-2 ml-5 list-disc space-y-1 text-ink-700;
+}
+.markdown ol {
+  @apply my-2 ml-5 list-decimal space-y-1 text-ink-700;
+}
+.markdown a {
+  @apply text-brand-600 underline underline-offset-2;
+}
+.markdown strong {
+  @apply font-semibold text-ink-900;
+}
+.markdown code {
+  @apply rounded bg-slate-100 px-1 py-0.5 text-sm text-brand-700;
+}
+.markdown table {
+  @apply my-3 w-full border-collapse text-sm;
+}
+.markdown th {
+  @apply border border-slate-200 bg-slate-50 px-3 py-2 text-left font-semibold text-ink-900;
+}
+.markdown td {
+  @apply border border-slate-200 px-3 py-2 text-ink-700 align-top;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+.animate-pulse-dot {
+  animation: pulse-dot 1.4s ease-in-out infinite;
+}

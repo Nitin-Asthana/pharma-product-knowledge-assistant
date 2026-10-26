@@ -1,0 +1,23 @@
+# Web framework
+fastapi>=0.141
+uvicorn[standard]>=0.52
+pydantic>=2.13
+pydantic-settings>=2.15
+python-dotenv>=1.0
+sse-starlette>=3.4
+
+# HTTP / scraping (pure-Python; uses the stdlib html.parser, no lxml build needed)
+requests>=2.32
+beautifulsoup4>=4.15
+
+# Data (pure-Python Excel writer; avoids pandas/numpy native builds)
+openpyxl>=3.1
+
+# Azure
+azure-identity>=1.25
+azure-search-documents>=11.5
+openai>=1.59
+
+# Testing
+pytest>=8.3
+httpx>=0.28

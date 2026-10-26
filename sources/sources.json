@@ -1,0 +1,16 @@
+{
+  "sources": [
+    {
+      "source_id": "abc-pharma-catalog",
+      "name": "ABC Pharma Catalog",
+      "description": "ABC Pharma Catalog product portfolio",
+      "url": "https://www.example.com/about-us/products/catalog/",
+      "source_type": "product_catalogue",
+      "enabled": true,
+      "country": "Global",
+      "business_unit": "Product Catalog",
+      "language": "en",
+      "refresh_enabled": true
+    }
+  ]
+}

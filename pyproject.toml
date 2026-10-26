@@ -1,0 +1,19 @@
+[project]
+name = "abc-pharma-product-assistant"
+version = "0.1.0"
+description = "ABC Pharma Product Knowledge Assistant — Dynamic Multi-Source RAG on Azure AI Search + Azure OpenAI"
+requires-python = ">=3.11"
+readme = "README.md"
+
+[tool.pytest.ini_options]
+testpaths = ["backend/tests"]
+pythonpath = ["backend", "."]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W"]
+ignore = ["E501"]

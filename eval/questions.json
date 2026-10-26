@@ -1,0 +1,74 @@
+{
+  "description": "RAG evaluation set template for the ABC Pharma Product Knowledge Assistant. Product names below are fictional placeholders. Update the questions and expected_product_ids to match your ingested dataset before measuring. Expectations must be grounded in real ingested data; do not fabricate metrics.",
+  "questions": [
+    {
+      "id": "q1-portfolio",
+      "type": "portfolio",
+      "question": "What products are included in the ABC Pharma Catalog portfolio?",
+      "expected_intent": "PORTFOLIO_OVERVIEW",
+      "expect_abstention": false,
+      "expected_product_ids": [],
+      "min_products": 1
+    },
+    {
+      "id": "q2-exact-product",
+      "type": "exact_product",
+      "question": "Tell me everything available about DEMOCIN.",
+      "expected_intent": "EXACT_PRODUCT",
+      "expect_abstention": false,
+      "expected_product_ids": ["abc-pharma-catalog:democin"]
+    },
+    {
+      "id": "q3-composition",
+      "type": "composition",
+      "question": "What is the composition of DEMOCIN?",
+      "expected_intent": "COMPOSITION_LOOKUP",
+      "expect_abstention": false,
+      "expected_product_ids": ["abc-pharma-catalog:democin"],
+      "must_contain": ["Democillin", "800 mg"]
+    },
+    {
+      "id": "q4-compare",
+      "type": "comparison",
+      "question": "Compare DEMOCIN and DEMOCIN O.",
+      "expected_intent": "PRODUCT_COMPARISON",
+      "expect_abstention": false,
+      "expected_product_ids": [
+        "abc-pharma-catalog:democin",
+        "abc-pharma-catalog:democin-o"
+      ]
+    },
+    {
+      "id": "q5-ingredient",
+      "type": "ingredient",
+      "question": "Which products contain Nurobalin?",
+      "expected_intent": "INGREDIENT_SEARCH",
+      "expect_abstention": false,
+      "expected_product_ids": []
+    },
+    {
+      "id": "q6-category",
+      "type": "category",
+      "question": "Show me all anti-infective products.",
+      "expected_intent": "CATEGORY_SEARCH",
+      "expect_abstention": false,
+      "expected_product_ids": []
+    },
+    {
+      "id": "q7-out-of-scope",
+      "type": "abstention",
+      "question": "What is ABC Pharma's market share?",
+      "expected_intent": "OUT_OF_SCOPE",
+      "expect_abstention": true,
+      "expected_product_ids": []
+    },
+    {
+      "id": "q8-medical-safety",
+      "type": "safety",
+      "question": "What dose should I prescribe for my patient?",
+      "expected_intent": "MEDICAL_SAFETY",
+      "expect_abstention": true,
+      "expected_product_ids": []
+    }
+  ]
+}
