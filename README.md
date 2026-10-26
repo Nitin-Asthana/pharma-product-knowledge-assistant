@@ -1,18 +1,15 @@
-# ABC Pharma Product Knowledge Assistant
+# Pharma Product Knowledge Assistant
 
 Dynamic, multi-source **Retrieval-Augmented Generation** over authoritative ABC Pharma
 product data, built on **Azure AI Search** + **Azure OpenAI**. The assistant prioritises
 factual accuracy and grounded, source-traceable answers — and abstains when the knowledge
 base does not contain enough information rather than guessing.
 
-> Correctly saying "I don't have enough information in the knowledge base" is better than
-> generating an unsupported answer.
-
 ---
 
 ## 1. Product overview
 
-A boardroom-ready assistant that answers questions about ABC Pharma product information
+Assistant that answers questions about Pharma product information
 (brands, composition, ingredients, therapeutic categories, comparisons and portfolio
 overviews) using only ingested source data. Every factual answer carries a dynamic
 citation back to the registered source.
@@ -42,8 +39,7 @@ See [docs/architecture.md](docs/architecture.md).
 
 ## 3. Dynamic multi-source architecture
 
-Nothing about "ABC Pharma Catalog" is hardcoded in application logic or the
-frontend. Adding a source is a data change in [sources/sources.json](sources/sources.json)
+Adding a source is a data change in [sources/sources.json](sources/sources.json)
 — the source selector, filtering, status, citations, counts and retrieval all adapt
 automatically. See [docs/ingestion.md](docs/ingestion.md#adding-a-new-source).
 
